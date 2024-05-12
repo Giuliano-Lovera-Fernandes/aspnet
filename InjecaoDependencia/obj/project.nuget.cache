@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "8O4NDwCE5NTzB6ZJKfIaKEk3Xsn8V95gbKx/WkucZ4X70Imfj9X4dsDGFIzna3P6DCMFRgohtau75/6Z5dO+JQ==",
+  "success": true,
+  "projectFilePath": "C:\\repo\\ghAspnet\\aspnet\\InjecaoDependencia\\InjecaoDependencia.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\giuli\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
