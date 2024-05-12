@@ -1,0 +1,14 @@
+C:\repo\ghAspnet\aspnet\Pipeline\bin\Debug\net7.0\Pipeline.exe
+C:\repo\ghAspnet\aspnet\Pipeline\bin\Debug\net7.0\Pipeline.deps.json
+C:\repo\ghAspnet\aspnet\Pipeline\bin\Debug\net7.0\Pipeline.runtimeconfig.json
+C:\repo\ghAspnet\aspnet\Pipeline\bin\Debug\net7.0\Pipeline.dll
+C:\repo\ghAspnet\aspnet\Pipeline\bin\Debug\net7.0\Pipeline.pdb
+C:\repo\ghAspnet\aspnet\Pipeline\obj\Debug\net7.0\Pipeline.GeneratedMSBuildEditorConfig.editorconfig
+C:\repo\ghAspnet\aspnet\Pipeline\obj\Debug\net7.0\Pipeline.AssemblyInfoInputs.cache
+C:\repo\ghAspnet\aspnet\Pipeline\obj\Debug\net7.0\Pipeline.AssemblyInfo.cs
+C:\repo\ghAspnet\aspnet\Pipeline\obj\Debug\net7.0\Pipeline.csproj.CoreCompileInputs.cache
+C:\repo\ghAspnet\aspnet\Pipeline\obj\Debug\net7.0\Pipeline.dll
+C:\repo\ghAspnet\aspnet\Pipeline\obj\Debug\net7.0\refint\Pipeline.dll
+C:\repo\ghAspnet\aspnet\Pipeline\obj\Debug\net7.0\Pipeline.pdb
+C:\repo\ghAspnet\aspnet\Pipeline\obj\Debug\net7.0\Pipeline.genruntimeconfig.cache
+C:\repo\ghAspnet\aspnet\Pipeline\obj\Debug\net7.0\ref\Pipeline.dll

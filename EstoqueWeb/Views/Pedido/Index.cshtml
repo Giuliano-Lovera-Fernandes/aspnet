@@ -1,0 +1,58 @@
+@model IEnumerable<PedidoModel>
+@{
+    var cliente = ViewBag.Cliente as ClienteModel;
+    ViewBag.Subtitulo = $"Listagem de Pedidos <b>{cliente.Nome}</b>";
+}  
+
+@* Um elemento ficará no canto esquerdo e outro no canto direito e um alinhamento vertical centralizado *@
+<header class="d-flex justify-content-between align-items-center">
+    <div>
+        <h1 class="text-primary">@Html.Raw(ViewBag.Subtitulo)</h1>
+    </div>
+    <div> 
+        @* por ser uma ação da mesma controladora o uso do asp-action, se não fosse da mesma controladora, usaria o asp-controller=""  *@
+        <a asp-action="Cadastrar"  asp-route-cid="@cliente.IdUsuario" class="btn btn-primary">Novo Pedido</a> 
+    @* </div>
+</header>
+<hr>
+
+<partial name="_Mensagem"></partial>
+
+@if (Model.Count() > 0)
+{
+    <table class="table table-striped tabela-pedidos">
+        <thead>
+            <tr>
+                <th>Número</th>
+                <th>Data/Hora Pedido</th>
+                <th>Valor Total</th>
+                <th>Data/Hora Entrega</th>                
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var pedido in Model)
+            {
+                <tr>                    
+                    <td>@pedido.IdPedido.ToString("D4")</td> *@
+                    
+                    @* Se a data do pedido for nula o pedido está em Aberto. *@
+                    @* <td>@(pedido.DataPedido.HasValue ? pedido.DataPedido : "Em Aberto")</td>
+                    <td>@(pedido.ValorTotal.Value.ToString("C"))</td>
+                    <td>@(pedido.DataEntrega.HasValue ? pedido.DataEntrega : "Não Entregue")</td>
+                    <td>
+                        <a asp-action="Index" asp-controller="ItemPedido" asp-route-ped="@pedido.IdPedido"
+                            class="btn btn-sm btn-secondary">Itens</a>
+
+                        <a asp-action="Excluir" asp-route-id="@pedido.IdPedido"
+                            class="btn btn-sm btn-danger">Excluir</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Não há nenhum pedido cadastrado para este cliente.</p>
+} *@

@@ -1,0 +1,50 @@
+@model IEnumerable<CategoriaModel>
+@{
+    ViewBag.Subtitulo = "Listagem de Categorias";
+} 
+
+@* Um elemento ficará no canto esquerdo e outro no canto direito e um alinhamento vertical centralizado *@
+<header class="d-flex justify-content-between align-items-center">
+    <div>
+        <h1 class="text-primary">@ViewBag.Subtitulo</h1>
+    </div>
+    <div>
+        @* por ser uma ação da mesma controladora o uso do asp-action, se não fosse da mesma controladora, usaria o asp-controller=""  *@
+        <a asp-action="Cadastrar" class="btn btn-primary">Nova Categoria</a>
+    </div>
+</header>
+<hr>
+
+<partial name="_Mensagem"></partial>
+
+@if (Model.Count() > 0)
+{
+    <table class="table table-striped tabela-categorias">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var categoria in Model)
+            {
+                <tr>                    
+                    <td>@categoria.Nome</td>
+                    <td>@categoria.IdCategoria</td>
+                    <td>
+                        <a asp-action="Cadastrar" asp-route-item="@categoria.IdCategoria"
+                            class="btn btn-sm btn-secondary">Alterar</a>
+
+                        <a asp-action="Excluir" asp-route-id="@categoria.IdCategoria"
+                            class="btn btn-sm btn-danger">Excluir</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Não há nenhuma categoria cadastrada</p>
+}
